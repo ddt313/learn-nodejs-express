@@ -33,6 +33,21 @@ module.exports.viewUser = (req, res) => {
 }
 
 module.exports.postCreate = (req, res) => {
+  var errors = {};
+  if ( !req.body.name ) {
+    errors.name = "Name is required!"
+  }
+  if ( !req.body.email ) {
+    errors.email = "Email is required!"
+  }
+
+  if (errors.name || errors.email) {
+    res.render('users/create', {
+      errors: errors
+    })
+
+    return;
+  }
   req.body.id = Date.now()
   db.get('users').push(req.body).write()
 

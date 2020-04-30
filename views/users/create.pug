@@ -1,7 +1,33 @@
-h3 Create user
+html
+  head
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="/css/users/create.css")
+  body
+    header.main-header
+      a.nav-brand D2T
+      nav.nav-header
+        ul
+          li
+            a.nav-link(href="/users/create") Create User
+          li
+            a.nav-link(href="#") Logout
+    .wrapper-content
 
-form(action="/users/create", method="post")
-    label Name
-    input(type="text", name="name")
+      h3 Create user
+      form.create-form(action="/users/create", method="post")
 
-    button Create
+        label(for="email") Email
+        input.input-form#email(type="email", name="email", autocomplete="off")
+        if (errors)
+          div.error= errors.email
+        else
+          div.error
+
+        label(for="name") Name
+        input.input-form#name(type="text", name="name", autocomplete="off")
+        if (errors)
+          div.error= errors.name
+        else
+          div.error
+
+        button.btn Create
