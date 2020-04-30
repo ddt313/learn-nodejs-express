@@ -1,0 +1,38 @@
+html
+  head
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="/css/users/style.css")
+  body
+    header.main-header
+      a.nav-brand D2T
+      nav.nav-header
+        ul
+          li
+            a.nav-link(href="/users/create") Create User
+          li
+            a.nav-link(href="#") Logout
+    .wrapper-content
+      h1.title-wrapper Users List
+
+      form.search-form(action='/users/search', method='GET')
+        input.search-input(type="text", name="q", autocomplete="off", value=(valueSearch ? valueSearch : ""))
+        button.btn-search Search
+
+      table.table-users
+        tr
+          th Email
+          th Name
+          th Age
+          th Action
+        each user in users
+          tr
+            td= user.email
+            td= user.name
+            td= user.age
+            td
+              a.btn-view-user(href="/users/" + user.id) View
+      //- ul
+      //-   each user in users
+      //-     li
+      //-       span= user.name
+      //-       a(href="/users/" + user.id) View
