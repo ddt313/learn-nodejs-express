@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 const userRoute = require('./routes/users.route')
+const loginRoute = require('./routes/login.route')
 
 const app = express()
 const port = 3000
@@ -19,6 +20,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/users', userRoute)
+app.use('/login', loginRoute)
 
 app.listen(port, () => {
   console.log("Server listen port " + port)
