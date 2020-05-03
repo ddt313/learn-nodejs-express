@@ -1,13 +1,23 @@
 html
   head
     link(rel="stylesheet", href="/css/style.css")
-    link(rel="stylesheet", href="/css/users/style.css")
+    link(rel="stylesheet", href="/css/login/style.css")
   body
     header.main-header
       a.nav-brand D2T
       nav.nav-header
         ul
           li
-            a.nav-link(href="/users/create") Create User
-          li
-            a.nav-link(href="#") Logout
+            a.nav-link(href="#") Register
+
+    .wrapper-content 
+      .title-wrapper Login
+
+      form.login-form(action="/login", method="POST")
+        label(for="email") Email
+        input.input-form#email(type="text", name="email", autocomplete="off")
+
+        label(for="password") Password
+        input.input-form#password(type="password", name="password", autocomplete="off")
+
+        button.btn-login(type="submit") Login

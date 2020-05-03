@@ -3,91 +3,16 @@
     {
       "name": "abc",
       "id": 1587981164397,
-      "email": "test-email@gmail.com",
+      "email": "abc@gmail.com",
+      "password": "123456",
       "age": 12
     },
     {
       "name": "xyz",
-      "id": 1587981171242
-    },
-    {
-      "name": "akd",
-      "id": 1587983749321
-    },
-    {
-      "name": "user 01",
-      "id": 1588149746437
-    },
-    {
-      "name": "1233",
-      "id": 1588149769877
-    },
-    {
-      "name": "user002",
-      "id": 1588149808236
-    },
-    {
-      "name": "abcdefgh",
-      "id": 1588150564768
-    },
-    {
-      "name": "user new",
-      "id": 1588171540996
-    },
-    {
-      "email": "",
-      "name": "",
-      "id": 1588210654801
-    },
-    {
-      "email": "",
-      "name": "",
-      "id": 1588210732470
-    },
-    {
-      "email": "",
-      "name": "",
-      "id": 1588210791095
-    },
-    {
-      "email": "ab@gmail.com",
-      "name": "",
-      "id": 1588210808691
-    },
-    {
-      "email": "a@123",
-      "name": "anch",
-      "id": 1588211127253
-    },
-    {
-      "email": "",
-      "name": "",
-      "id": 1588211584999
-    },
-    {
-      "email": "",
-      "name": "",
-      "id": 1588211624003
-    },
-    {
-      "email": "a@d",
-      "name": "",
-      "id": 1588211879256
-    },
-    {
-      "email": "abc@gmail.com",
-      "name": "duc thanh",
-      "id": 1588213776251
-    },
-    {
-      "email": "ahihi@outlook.con",
-      "name": "ahihi",
-      "id": 1588225096362
-    },
-    {
-      "email": "ducthanh@gmail.com",
-      "name": "Đặng Đức Thành",
-      "id": 1588337195308
+      "id": 1587981168765,
+      "email": "xyz@gmail.com",
+      "password": "123456",
+      "age": 23
     }
   ]
 }
