@@ -1,6 +1,7 @@
 const db = require('../db')
 
 module.exports.index = (req, res) => {
+  console.log(req.cookies)
   res.render('users/index', {
     users: db.get('users').value()
   })
