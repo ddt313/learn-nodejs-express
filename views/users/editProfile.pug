@@ -1,0 +1,25 @@
+html
+  head
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="/css/users/editProfile.css")
+  body
+    header.main-header
+      a.nav-brand D2T
+      nav.nav-header
+        ul
+          li
+            a.nav-link(href="#") Logout
+
+    .wrapper-content
+      .main-title Edit Form
+      form.form-edit-profile(method="post")
+        label(for="email") Email
+        input#email(type="email", name="email", value=user.email)
+        
+        label(for="name") Name
+        input#name(type="text", name="name", value=user.name)
+
+        label(for="age") Age
+        input#age(type="text", name="age", value=user.age)
+
+        button(type="submit") Save

@@ -29,6 +29,16 @@ module.exports.viewUser = (req, res) => {
   const user = db.get('users').find({ id: id }).value()
 
   res.render('users/view', {
+    user,
+    id
+  })
+}
+
+module.exports.editProfile = (req, res) => {
+  const id = parseInt(req.params.id)
+  const user = db.get('users').find({ id }).value()
+
+  res.render('./users/editProfile', {
     user
   })
 }
@@ -36,6 +46,18 @@ module.exports.viewUser = (req, res) => {
 module.exports.postCreate = (req, res) => {
   req.body.id = Date.now()
   db.get('users').push(req.body).write()
-
+  
   res.redirect('/users')
+}
+
+module.exports.postEditProfile = (req, res) => {
+  const id = parseInt(req.params.id);
+  const {email, name, age} = req.body;
+
+  db.get('users')
+    .find({ id })
+    .assign({ email, name, age })
+    .write()
+
+  res.redirect('/users/' + id);
 }

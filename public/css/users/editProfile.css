@@ -1,0 +1,37 @@
+.wrapper-content {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-content .form-edit-profile {
+    width: 50%;
+    /* display: flex; */
+}
+
+.wrapper-content .form-edit-profile input {
+    width: 100%;
+}
+
+.wrapper-content .form-edit-profile label {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.wrapper-content .form-edit-profile input {
+    margin-top: 5px;
+    height: 25px;
+    text-indent: 2px;
+}
+
+.wrapper-content .form-edit-profile button {
+    margin-top: 13px;
+    width: 45px;
+    height: 34px;
+    background-color: #107cfa;
+    border: none;
+    border-radius: 7px;
+}

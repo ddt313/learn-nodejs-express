@@ -11,13 +11,9 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     const email = req.body.email
     const password = req.body.password
-
-    console.log(email, password)
-
+    
     const user = db.get('users').find({ email }).value()
-    var error = false
-
-    console.log(user)
+    let error = false
 
     if (user) {
         if (password == user.password) {
