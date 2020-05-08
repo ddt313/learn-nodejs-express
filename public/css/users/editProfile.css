@@ -35,3 +35,8 @@
     border: none;
     border-radius: 7px;
 }
+
+.wrapper-content .form-edit-profile .error {
+    color: red;
+    margin-top: 5px;
+}

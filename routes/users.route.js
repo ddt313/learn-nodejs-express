@@ -1,7 +1,7 @@
 const express = require('express')
 
 const usersController = require('../controllers/users.controller')
-const validate = require('../validate/users.create.validate')
+const validate = require('../validate/users.validate')
 
 const router = express.Router()
 
@@ -17,6 +17,6 @@ router.get('/:id/edit-profile', usersController.editProfile)
 
 router.post('/create', validate.postUsers, usersController.postCreate)
 
-router.post('/:id/edit-profile', usersController.postEditProfile)
+router.post('/:id/edit-profile', validate.postEditProfile, usersController.postEditProfile)
 
 module.exports = router

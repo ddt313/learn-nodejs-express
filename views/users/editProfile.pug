@@ -15,9 +15,17 @@ html
       form.form-edit-profile(method="post")
         label(for="email") Email
         input#email(type="email", name="email", value=user.email)
+        if (errors)
+          div.error= errors.email
+        else
+          div.errors
         
         label(for="name") Name
         input#name(type="text", name="name", value=user.name)
+        if (errors)
+          div.error= errors.name
+        else
+          div.errors
 
         label(for="age") Age
         input#age(type="text", name="age", value=user.age)
